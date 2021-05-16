@@ -4,7 +4,7 @@ public class snakeladder {
 	public static final int NO_MOVE=0,LADDER=1,SNAKE=2;
 
 	public static void main(String[] args) {
-       System.out.println("Welcome to Snake And Ladder Simulator");
+System.out.println("Welcome to Snake And Ladder Simulator");
 		
 		int player1Position=0;
 		
@@ -19,6 +19,8 @@ public class snakeladder {
 			{
 				case LADDER: 
 							player1Position+=dice;
+							if(player1Position>100)
+								player1Position-=dice;
 							break;
 				case SNAKE:
 							player1Position-=dice;
@@ -27,8 +29,6 @@ public class snakeladder {
 			
 			if (player1Position<0)
 				player1Position=0;
-       
-       
 			
 	}
 
