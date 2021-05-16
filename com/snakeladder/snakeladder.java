@@ -4,22 +4,32 @@ public class snakeladder {
 	public static final int NO_MOVE=0,LADDER=1,SNAKE=2;
 
 	public static void main(String[] args) {
+       System.out.println("Welcome to Snake And Ladder Simulator");
 		
-       System.out.println("welcome to snake and ladder stimulation");
-       int player1Position=0;
-
-		int dice= (int) Math.floor(Math.random()*10)%6 +1;
-
-		int move= (int) Math.floor(Math.random()*10)%3;
+		int player1Position=0;
 		
-		switch (move)
+		while(player1Position<100)
 		{
-			case LADDER: 
-						player1Position+=dice;
-						break;
-			case SNAKE:
-						player1Position-=dice;
-						break;	
+			
+			int dice= (int) Math.floor(Math.random()*10)%6 +1;
+			
+			int move= (int) Math.floor(Math.random()*10)%3;
+			
+			switch (move)
+			{
+				case LADDER: 
+							player1Position+=dice;
+							break;
+				case SNAKE:
+							player1Position-=dice;
+							break;		
+			}
+			
+			if (player1Position<0)
+				player1Position=0;
+       
+       
+			
 	}
 
 	}
